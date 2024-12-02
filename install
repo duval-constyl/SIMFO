@@ -1,0 +1,5 @@
+command "npx create-vite@latest . --template react" to create the skeleton
+command "npm install" to install node modules
+command "npm run dev" to run the server
+script "rafce" pour afficher le script de base d'un fichier JavaScript React
+configurer tailwindcss regarder sur son site tailwindcss.com
