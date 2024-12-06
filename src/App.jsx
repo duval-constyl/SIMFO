@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Products from "./components/Products/Products";
+import Home from "./components/Home/Home";
+import Service from "./components/Service/Service";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TopProducts from "./components/TopProducts/TopProducts";
-import Banner from "./components/Banner/Banner";
+import About from "./components/About/About";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
@@ -30,12 +30,11 @@ const App = () => {
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
       <Navbar handleOrderPopup={handleOrderPopup} />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Products />
+      <Home handleOrderPopup={handleOrderPopup} />
+      <About />
+      <Service />
       <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Banner />
       <Subscribe />
-      <Products />
       <Testimonials />
       <Footer />
       <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />

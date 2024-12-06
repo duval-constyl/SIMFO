@@ -1,30 +1,48 @@
 import React from "react";
 import Slider from "react-slick";
+import Image1 from "../../assets/testimony/photo1.png";
+import Image2 from "../../assets/testimony/photo2.png";
+import Image3 from "../../assets/testimony/photo3.png";
+import Image4 from "../../assets/testimony/photo4.png";
+import Image5 from "../../assets/testimony/photo5.png";
+import Image6 from "../../assets/testimony/photo6.png";
 
 const TestimonialData = [
   {
     id: 1,
-    name: "Victor",
+    name: "TEMA Gregori",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/101/101",
+    img: Image1,
   },
   {
     id: 2,
-    name: "Satya Nadella",
+    name: "FOTSO Duval",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/102/102",
+    img: Image2,
   },
   {
     id: 3,
-    name: "Virat Kohli",
+    name: "Erwann-Axel",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/104/104",
+    img: Image3,
+  },
+  {
+    id: 4,
+    name: "KANAA Albert",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    img: Image4,
   },
   {
     id: 5,
-    name: "Sachin Tendulkar",
+    name: "NWEDJIWE Enzo",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/103/103",
+    img: Image5,
+  },
+  {
+    id: 6,
+    name: "NGUIMBIS Varence",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    img: Image6,
   },
 ];
 

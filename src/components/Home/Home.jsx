@@ -1,34 +1,34 @@
 import React from "react";
-import Image1 from "../../assets/hero/women.png";
-import Image2 from "../../assets/hero/shopping.png";
-import Image3 from "../../assets/hero/sale.png";
+import Image1 from "../../assets/mecanique/mecanique1.jfif";
+import Image2 from "../../assets/mecanique/mecanique2.jfif";
+import Image3 from "../../assets/mecanique/mecanique3.jfif";
 import Slider from "react-slick";
 
 const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Upto 50% off on all Men's Wear",
+    title: "Upto 50% off on our expert expertise",
     description:
       "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
     img: Image2,
-    title: "30% off on all Women's Wear",
+    title: "70% off on cars polishing ",
     description:
       "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
     img: Image3,
-    title: "70% off on all Products Sale",
+    title: "30% off on any vehicule maintenance",
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 
-const Hero = ({ handleOrderPopup }) => {
+const Home = ({ handleOrderPopup }) => {
   var settings = {
     dots: false,
     arrows: false,
@@ -45,7 +45,7 @@ const Hero = ({ handleOrderPopup }) => {
   return (
     <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
       {/* background pattern */}
-      <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
+      <div className="h-[700px] w-[700px] bg-indigo-800/60 absolute -top-1/2 left-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* hero section */}
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
@@ -79,12 +79,12 @@ const Hero = ({ handleOrderPopup }) => {
                       onClick={handleOrderPopup}
                       className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
                     >
-                      Order Now
+                      Contact us
                     </button>
                   </div>
                 </div>
                 {/* image section */}
-                <div className="order-1 sm:order-2">
+                <div className="order-1 sm:order-2 pt-12">
                   <div
                     data-aos="zoom-in"
                     data-aos-once="true"
@@ -93,7 +93,7 @@ const Hero = ({ handleOrderPopup }) => {
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] object-cover mx-auto rounded-3xl"
                     />
                   </div>
                 </div>
@@ -106,4 +106,4 @@ const Hero = ({ handleOrderPopup }) => {
   );
 };
 
-export default Hero;
+export default Home;

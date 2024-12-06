@@ -1,35 +1,35 @@
 import React from "react";
-import Img1 from "../../assets/shirt/shirt.png";
-import Img2 from "../../assets/shirt/shirt2.png";
-import Img3 from "../../assets/shirt/shirt3.png";
+import Img1 from "../../assets/material/roue.png";
+import Img2 from "../../assets/material/roue.png";
+import Img3 from "../../assets/material/roue.png";
 import { FaStar } from "react-icons/fa";
 
 const ProductsData = [
   {
     id: 1,
     img: Img1,
-    title: "Casual Wear",
+    title: "Moteur",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
     img: Img2,
-    title: "Printed shirt",
+    title: "Radiateur",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
     img: Img3,
-    title: "Women shirt",
+    title: "Roue",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 const TopProducts = ({ handleOrderPopup }) => {
   return (
-    <div>
+    <div className="mt-5 mb-24">
       <div className="container">
         {/* Header section */}
         <div className="text-left mb-24">
@@ -56,7 +56,7 @@ const TopProducts = ({ handleOrderPopup }) => {
                 <img
                   src={data.img}
                   alt=""
-                  className="max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
+                  className="max-w-[140px] min-h-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
                 />
               </div>
               {/* details section */}
@@ -82,6 +82,12 @@ const TopProducts = ({ handleOrderPopup }) => {
             </div>
           ))}
         </div>
+        {/* view all button */}
+          <div className="flex justify-center">
+            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md" data-aos="fade-up">
+              View All Products
+            </button>
+          </div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
-import footerLogo from "../../assets/logo.png";
+import footerLogo from "../../assets/simfo.png";
 import Banner from "../../assets/website/footer-pattern.jpg";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import {
   FaFacebook,
   FaInstagram,
@@ -24,20 +25,23 @@ const FooterLinks = [
     link: "/#",
   },
   {
-    title: "About",
+    title: "About Us",
     link: "/#about",
+  },
+  {
+    title: "Ours Service",
+    link: "/#blog",
   },
   {
     title: "Contact",
     link: "/#contact",
   },
-  {
-    title: "Blog",
-    link: "/#blog",
-  },
 ];
 
+const position = { lat: 4.061536, lng: 9.786072 };
+
 const Footer = () => {
+  
   return (
     <div style={BannerImg} className="text-white">
       <div className="container">
@@ -45,12 +49,11 @@ const Footer = () => {
           {/* company details */}
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={footerLogo} alt="" className="max-w-[50px]" />
-              Shopsy
+              <img src={footerLogo} alt="" className="max-w-[200px]" />
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
-              beatae ea recusandae blanditiis veritatis.
+            We are the difference in what exists. SIMFO is a group of engineers and technicians in General Mechanics, 
+            Civil Engineering, and Computer Science who bring a new vision.
             </p>
           </div>
 
@@ -75,45 +78,41 @@ const Footer = () => {
             </div>
             <div>
               <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-center gap-3 mt-6">
+                  <a href="#">
+                    <FaInstagram className="text-3xl" />
+                  </a>
+                  <a href="#">
+                    <FaFacebook className="text-3xl" />
+                  </a>
+                  <a href="#">
+                    <FaLinkedin className="text-3xl" />
+                  </a>
+                </div>
+                <div className="mt-6">
+                  <div className="flex items-center gap-3">
+                    <FaLocationArrow />
+                    <p>Japoma-Yassa, Douala</p>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3">
+                    <FaMobileAlt />
+                    <p>+237 654265992</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* social links */}
 
-            <div>
-              <div className="flex items-center gap-3 mt-6">
-                <a href="#">
-                  <FaInstagram className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaFacebook className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaLinkedin className="text-3xl" />
-                </a>
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-3">
-                  <FaLocationArrow />
-                  <p>Noida, Uttar Pradesh</p>
-                </div>
-                <div className="flex items-center gap-3 mt-3">
-                  <FaMobileAlt />
-                  <p>+91 123456789</p>
-                </div>
+            <div className="py-8 px-4">
+              <div style={{ height: "200px", width: "100%" }}>
+                <LoadScript googleMapsApiKey="YOUR_API_KEY"> {/* Replace with your actual API key */}
+                  <GoogleMap
+                    mapContainerStyle={{ height: "100%", width: "100%" }}
+                    center={position}
+                    zoom={12}
+                  />
+                </LoadScript>
               </div>
             </div>
           </div>
