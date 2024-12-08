@@ -1,22 +1,24 @@
 import React from "react";
 import BannerImg from "../../assets/mecanique/mecanique3.jfif";
 import { FaStar } from "react-icons/fa";
-
+import { useTranslation } from 'react-i18next';
 
 const Service = () => {
+  const { i18n, t } = useTranslation();
+  {/*{t('home')}     t('home') */}
   return (
-    <div className="mt-5 mb-12">
+    <div id="service" className="mt-5 mb-12">
       <div className="container">
         {/* Header section */}
         <div className="text-center mb-5 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
-            Informations on our services
+          {t('seviceInf')}
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-           Our Services
+          {t('service')}
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-          Our services are offered and provided by our group of engineers and technicians in various domains.
+          {t('serviceDes')}
           </p>
         </div>
         {/* Body section */}
@@ -28,29 +30,29 @@ const Service = () => {
                 <div data-aos="fade-up" className="flex items-center gap-4">
                   <FaStar className="text-4xl h-20 w-20 shadow-sm p-4 rounded-full bg-blue-100 dark:bg-blue-400" />
                   <div>
-                    <p className="font-bold">Troubleshooting and Repair of Heavy Equipment</p>
-                    <span>This service involves the troubleshooting and repair of heavy machinery and equipment.</span>
+                    <p className="font-bold">{t('trouble')}</p>
+                    <span>{t('troubleDes')}</span>
                   </div>
                 </div>
                 <div data-aos="fade-up" className="flex items-center gap-4">
                   <FaStar className="text-4xl h-20 w-20 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />
                   <div>
-                    <p className="font-bold">Metallic Construction</p>
-                    <span>This service focuses on the construction of metal structures using materials like steel and aluminum.</span>
+                    <p className="font-bold">{t('metallic')}</p>
+                    <span>{t('metallicDes')}</span>
                   </div> 
                 </div>
                 <div data-aos="fade-up" className="flex items-center gap-4">
                   <FaStar className="text-4xl h-20 w-20 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400" />
                   <div>
-                    <p className="font-bold">General Mechanics</p>
-                    <span>General mechanics services encompass a wide range of mechanical repairs and maintenance tasks.</span>
+                    <p className="font-bold">{t('general')}</p>
+                    <span>{t('generalDes')}</span>
                   </div>
                 </div>
                 <div data-aos="fade-up" className="flex items-center gap-4">
                   <FaStar className="text-4xl h-20 w-20 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-yellow-400" />
                   <div>
-                    <p className="font-bold">Industrial Mechanics</p>
-                    <span>Industrial mechanics focus on the maintenance and repair of machinery used in manufacturing processes.</span>
+                    <p className="font-bold">{t('industrial')}</p>
+                    <span>{t('industrialDes')}</span>
                   </div>
                 </div>
               </div>

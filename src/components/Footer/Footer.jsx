@@ -9,6 +9,7 @@ import {
   FaLocationArrow,
   FaMobileAlt,
 } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 const BannerImg = {
   backgroundImage: `url(${Banner})`,
@@ -19,28 +20,30 @@ const BannerImg = {
   width: "100%",
 };
 
-const FooterLinks = [
-  {
-    title: "Home",
-    link: "/#",
-  },
-  {
-    title: "About Us",
-    link: "/#about",
-  },
-  {
-    title: "Ours Service",
-    link: "/#blog",
-  },
-  {
-    title: "Contact",
-    link: "/#contact",
-  },
-];
-
 const position = { lat: 4.061536, lng: 9.786072 };
 
 const Footer = () => {
+  const { i18n, t } = useTranslation();
+  {/*{t('home')}     t('home') */}
+
+  const FooterLinks = [
+    {
+      title: t('home'),
+      link: "/#",
+    },
+    {
+      title: t('about'),
+      link: "/#services",
+    },
+    {
+      title: t('service'),
+      link: "/#",
+    },
+    {
+      title: t('contact'),
+      link: "/#",
+    },
+  ];
   
   return (
     <div style={BannerImg} className="text-white">
@@ -52,8 +55,7 @@ const Footer = () => {
               <img src={footerLogo} alt="" className="max-w-[200px]" />
             </h1>
             <p>
-            We are the difference in what exists. SIMFO is a group of engineers and technicians in General Mechanics, 
-            Civil Engineering, and Computer Science who bring a new vision.
+            {t('footer')}
             </p>
           </div>
 
@@ -62,7 +64,7 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
+                {t('important')}
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (

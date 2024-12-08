@@ -6,6 +6,7 @@ import Image3 from "../../assets/testimony/photo3.png";
 import Image4 from "../../assets/testimony/photo4.png";
 import Image5 from "../../assets/testimony/photo5.png";
 import Image6 from "../../assets/testimony/photo6.png";
+import { useTranslation } from 'react-i18next';
 
 const TestimonialData = [
   {
@@ -47,6 +48,9 @@ const TestimonialData = [
 ];
 
 const Testimonials = () => {
+  const { i18n, t } = useTranslation();
+  {/*{t('home')}     t('home') */}
+
   var settings = {
     dots: true,
     arrows: false,
@@ -86,19 +90,18 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="py-10 mb-10">
+    <div id="testimony" className="py-10 mb-10">
       <div className="container">
         {/* header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
-            What our customers are saying
+          {t('testimonyTit')}
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Testimonials
+          {t('testimony')}
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+          {t('testimonyDes')}
           </p>
         </div>
 

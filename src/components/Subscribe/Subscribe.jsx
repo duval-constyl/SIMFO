@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../assets/website/orange-pattern.jpg";
+import { useTranslation } from 'react-i18next';
 
 const BannerImg = {
   backgroundImage: `url(${Banner})`,
@@ -11,8 +12,11 @@ const BannerImg = {
 };
 
 const Subscribe = () => {
+  const { i18n, t } = useTranslation();
+  {/*{t('home')}     t('home') */}
   return (
     <div
+      id="contact"
       data-aos="zoom-in"
       className="mb-10 bg-gray-100 dark:bg-gray-800 text-white"
       style={BannerImg}
@@ -20,21 +24,21 @@ const Subscribe = () => {
       <div className="container backdrop-blur-sm py-10">
         <div className="space-y-6 max-w-xl mx-auto">
           <h1 className="text-2xl !text-center sm:text-left sm:text-4xl font-semibold">
-            Get Notified On Products Discount
+          {t('subscribe')}
           </h1>
           <input
             data-aos="fade-up"
             type="text"
-            placeholder="Enter your email"
+            placeholder={t('email')}
             className="w-full p-2 bg-white dark:bg-gray-700 text-black dark:text-white"// Change text color to black
           />
           <textarea
             data-aos="fade-up"
-            placeholder="Description"
+            placeholder={t('subscribeDes')}
             className="w-full p-2 bg-white dark:bg-gray-700 text-black dark:text-white h-24 resize-none" // Added height and no resize
           />
           <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md" data-aos="fade-up">
-              Contact Us
+          {t('us')}
           </button>
         </div>
       </div>

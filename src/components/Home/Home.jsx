@@ -3,30 +3,8 @@ import Image1 from "../../assets/mecanique/mecanique1.jfif";
 import Image2 from "../../assets/mecanique/mecanique2.jfif";
 import Image3 from "../../assets/mecanique/mecanique3.jfif";
 import Slider from "react-slick";
+import { useTranslation } from 'react-i18next';
 
-const ImageList = [
-  {
-    id: 1,
-    img: Image1,
-    title: "Upto 50% off on our expert expertise",
-    description:
-      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 2,
-    img: Image2,
-    title: "70% off on cars polishing ",
-    description:
-      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 3,
-    img: Image3,
-    title: "30% off on any vehicule maintenance",
-    description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-];
 
 const Home = ({ handleOrderPopup }) => {
   var settings = {
@@ -42,8 +20,32 @@ const Home = ({ handleOrderPopup }) => {
     pauseOnFocus: true,
   };
 
+  const { i18n, t } = useTranslation();
+  {/*{t('home')}     t('home') */}
+
+  const ImageList = [
+    {
+      id: 1,
+      img: Image1,
+      title: t('title1'),
+      description:t('description1'),
+    },
+    {
+      id: 2,
+      img: Image2,
+      title: t('title2'),
+      description:t('description2'),
+    },
+    {
+      id: 3,
+      img: Image3,
+      title: t('title3'),
+      description:t('description3'),
+    },
+  ];
+
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
+    <div id="home" className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
       {/* background pattern */}
       <div className="h-[700px] w-[700px] bg-indigo-800/60 absolute -top-1/2 left-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* hero section */}
@@ -79,7 +81,7 @@ const Home = ({ handleOrderPopup }) => {
                       onClick={handleOrderPopup}
                       className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
                     >
-                      Contact us
+                      {t('contact2')}
                     </button>
                   </div>
                 </div>
